@@ -24,16 +24,6 @@ public class CardTest {
     public void kingHasValue10(){
         assertEquals(10, card.getValueFromEnum());
     }
-//    @Test
-//    public void suitCanBeMisspelled(){
-//        card = new Card("Heaarrts");
-//        assertEquals("Heaarrts", card.getSuit());
-//
-//    }
-//
-//    @Test
-//    public void suitCanBeBananas(){
-//        card = new Card("Bananas");
-//        assertEquals("Bananas", card.getSuit());
-//    }
+
+
 }
