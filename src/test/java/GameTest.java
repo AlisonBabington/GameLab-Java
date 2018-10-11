@@ -19,11 +19,7 @@ public class GameTest {
         dealer = new Dealer();
         game = new Game(player1, player2, deck, dealer);
     }
-
-    @Test
-    public void canHaveGame() {
-        game.startGame();
-    }
+    
 
     @Test
     public void canJudgeHand() {
