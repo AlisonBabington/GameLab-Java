@@ -42,6 +42,10 @@ public class GameTest {
         assertEquals(1 , player1.getScore());
 
     }
-
+    @Test
+    public void gameWon(){
+   Player winningPlayer = game.startGame();
+    assertEquals(true, winningPlayer instanceof Player);
+}
 
 }

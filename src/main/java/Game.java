@@ -12,11 +12,19 @@ public class Game {
         this.dealer = dealer;
     }
 
-    public void startGame() {
-        dealer.dealDeck(deck, player1, player2);
-        Card player1Card = player1.playCard();
-        Card player2Card = player2.playCard();
-        declareWinner(player1Card,player2Card);
+    public Player startGame() {
+        while (player1.getScore() < 3 && player2.getScore() < 3) {
+
+            dealer.dealDeck(deck, player1, player2);
+            Card player1Card = player1.playCard();
+            Card player2Card = player2.playCard();
+            declareWinner(player1Card, player2Card);
+        }
+        if (player1.getScore() > player2.getScore()) {
+            return player1;
+        }
+        return player2;
+
     }
     public void declareWinner(Card card, Card card2){
        Player winningPlayer = judgeHand(card,card2);
@@ -31,4 +39,5 @@ public class Game {
         }
      return player2;
     }
+
 }
