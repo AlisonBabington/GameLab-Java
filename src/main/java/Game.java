@@ -20,10 +20,7 @@ public class Game {
             Card player2Card = player2.playCard();
             declareWinner(player1Card, player2Card);
         }
-        if (player1.getScore() > player2.getScore()) {
-            return player1;
-        }
-        return player2;
+        return player1.getScore() > player2.getScore()? player1 : player2;
 
     }
     public void declareWinner(Card card, Card card2){

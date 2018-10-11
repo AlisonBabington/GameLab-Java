@@ -17,7 +17,7 @@ public class GameTest {
         player1 = new Player("p1");
         player2 = new Player("p2");
         dealer = new Dealer();
-        game = new Game (player1, player2, deck, dealer);
+        game = new Game(player1, player2, deck, dealer);
     }
 
     @Test
@@ -26,26 +26,27 @@ public class GameTest {
     }
 
     @Test
-    public void canJudgeHand(){
-        Card player1Card = new Card(SuitType.CLUBS,CardRank.KING);
-        Card player2Card = new Card(SuitType.CLUBS,CardRank.EIGHT);
+    public void canJudgeHand() {
+        Card player1Card = new Card(SuitType.CLUBS, CardRank.KING);
+        Card player2Card = new Card(SuitType.CLUBS, CardRank.EIGHT);
 
-        assertEquals(player1,game.judgeHand(player1Card, player2Card));
+        assertEquals(player1, game.judgeHand(player1Card, player2Card));
     }
+
     @Test
-    public void winningPlayer(){
+    public void winningPlayer() {
 
-        Card player1Card = new Card(SuitType.CLUBS,CardRank.KING);
-        Card player2Card = new Card(SuitType.CLUBS,CardRank.EIGHT);
-        game.declareWinner(player1Card,player2Card);
+        Card player1Card = new Card(SuitType.CLUBS, CardRank.KING);
+        Card player2Card = new Card(SuitType.CLUBS, CardRank.EIGHT);
+        game.declareWinner(player1Card, player2Card);
 
-        assertEquals(1 , player1.getScore());
+        assertEquals(1, player1.getScore());
 
     }
-    @Test
-    public void gameWon(){
-   Player winningPlayer = game.startGame();
-    assertEquals(true, winningPlayer instanceof Player);
-}
 
+    @Test
+    public void gameWon() {
+        Player winningPlayer = game.startGame();
+        assertEquals(true, winningPlayer instanceof Player);
+    }
 }
