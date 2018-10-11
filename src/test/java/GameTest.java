@@ -32,4 +32,16 @@ public class GameTest {
 
         assertEquals(player1,game.judgeHand(player1Card, player2Card));
     }
+    @Test
+    public void winningPlayer(){
+
+        Card player1Card = new Card(SuitType.CLUBS,CardRank.KING);
+        Card player2Card = new Card(SuitType.CLUBS,CardRank.EIGHT);
+        game.declareWinner(player1Card,player2Card);
+
+        assertEquals(1 , player1.getScore());
+
+    }
+
+
 }

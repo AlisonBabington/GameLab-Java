@@ -16,6 +16,12 @@ public class Game {
         dealer.dealDeck(deck, player1, player2);
         Card player1Card = player1.playCard();
         Card player2Card = player2.playCard();
+        declareWinner(player1Card,player2Card);
+    }
+    public void declareWinner(Card card, Card card2){
+       Player winningPlayer = judgeHand(card,card2);
+       winningPlayer.updateScore();
+
     }
 
 

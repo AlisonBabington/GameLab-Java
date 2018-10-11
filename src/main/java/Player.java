@@ -22,4 +22,12 @@ public class Player {
     public Card playCard() {
         return hand.remove(0);
     }
+
+    public int getScore() {
+        return score;
+    }
+
+    public void updateScore(){
+       score += 1;
+    }
 }

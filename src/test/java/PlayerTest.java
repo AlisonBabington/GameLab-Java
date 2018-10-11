@@ -27,5 +27,10 @@ public class PlayerTest {
     assertEquals(card, player.playCard());
 
     }
+    @Test
+    public void getScore(){
+        assertEquals(0, player.getScore());
+
+    }
 }
 
