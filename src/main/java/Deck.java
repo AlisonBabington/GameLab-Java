@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 
 public class Deck {
     private ArrayList<Card> cards;
@@ -22,5 +24,10 @@ public class Deck {
 
     public int getSize() {
         return this.cards.size();
+    }
+
+    public void shuffleDeck(){
+
+        Collections.shuffle(cards);
     }
 }
